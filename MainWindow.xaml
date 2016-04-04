@@ -1,0 +1,84 @@
+﻿<Window x:Class="KinectMouse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="707" Width="940" Closing="Window_Closing" WindowState="Maximized"
+        Name="window" Background="Black">
+    <Grid>
+        <Image Name="imageRgb" Stretch="Uniform" />
+        <Canvas Name="mypanel" Margin="0,0,0,0">
+            <TextBlock Name="textBlock1" Height="50" Width="215" Background="Black" FontSize="45" FontStyle="Italic" Canvas.Left="0" Canvas.Bottom="0">
+                <TextBlock.Foreground>
+                    <ImageBrush ImageSource="R2-D2.jpg" />
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Canvas>
+
+        <Canvas Name="c" Height="350" Width="525">
+
+            <Canvas Name="cv1" Width="200" Height="250" Canvas.Left="150" Canvas.Top="25" Visibility="Hidden">
+                <TextBox Height="35" Text="TITLE" Width="400" FontSize="25" TextAlignment="Center" Background="#FF38E8E0"/>
+                <Image Name="img" Height="120" Width="400" Canvas.Top="35" Source="/KinectMouse;component/Images/data_img06.jpg"/>
+                <TextBox Height="5" Canvas.Left="69" TextWrapping="Wrap" Text="TextBox" Canvas.Top="135" Width="0"/>
+                <TextBlock Height="95" Width="400" Canvas.Bottom="0" FontSize="16" Background="#FF00DADA">
+                        contents<LineBreak/>
+                        display sentences of ad.
+                </TextBlock>
+            </Canvas>
+        </Canvas>
+
+        <Canvas Name="Canvas1" Margin="0,0,0,0">
+            <Image Height="69" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peach1" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach1.png" Canvas.Left="200" Canvas.Top="0"  Visibility="Hidden" MouseEnter="peach1_MouseEnter" />
+            <Image Height="70" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peach2" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach1.png" Canvas.Left="900" Canvas.Top="-40"  Visibility="Hidden" MouseEnter="peach2_MouseEnter" />
+            <Image Height="69" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peach3" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach1.png" Canvas.Left="350" Canvas.Top="-50"  Visibility="Hidden" MouseEnter="peach3_MouseEnter" />
+            <Image Height="69" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peach4" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach1.png" Canvas.Left="450" Canvas.Top="-50"  Visibility="Hidden" MouseEnter="peach4_MouseEnter" />
+            <Image Height="69" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peach5" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach1.png" Canvas.Left="650" Canvas.Top="-50"  Visibility="Hidden" MouseEnter="peach5_MouseEnter" />
+            <Image Height="69" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peachA" Stretch="Fill" VerticalAlignment="Top" Width="79" Source="/KinectMouse;component/Images/peach.png" Canvas.Left="650" Canvas.Top="-50"  Visibility="Hidden" MouseEnter="peachA_MouseEnter" />
+            <Image Height="180" HorizontalAlignment="Left" Margin="0,0,0,0" Name="peachB" Stretch="Fill" VerticalAlignment="Top" Width="200" Source="/KinectMouse;component/Images/peach_b.png" Canvas.Left="650" Canvas.Top="150"  Visibility="Hidden" MouseEnter="peachB_MouseEnter" />
+
+            <TextBlock Canvas.Left="16" Canvas.Top="278" Height="32" x:Name="score_board" Width="130" RenderTransformOrigin="-2.241,2.109" FontSize="20" FontFamily="Meiryo" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Background="White" Visibility="Hidden">
+                <Run Text="score : 0"/></TextBlock>
+            <Image Height="86" Canvas.Left="10" Canvas.Top="205" Width="112" Source="/KinectMouse;component/Images/kago2.png" Visibility="Hidden" Name="kago"/>
+        </Canvas>
+
+        <Canvas Name="mypanel2">
+            <Image Canvas.Right="250" Canvas.Bottom="0" Width="150" Height="150"  Source="signage.png"/>
+            <Image Canvas.Left="32" Canvas.Top="59" Height="166" Name="image1" Stretch="Fill" Width="140" Source="/KinectMouse;component/Images/kokokuA.png" Visibility="Hidden" />
+
+            <Canvas Name="home" Width="200" Height="350" Canvas.Top="200" Canvas.Right="250" Visibility="Visible">
+                <Button Name="hbutton1" Content="News" Width="200" Height="100" Canvas.Top="80" Canvas.Right="30" Background="Blue" FontSize="50" FontFamily="Snap ITC"/>
+                <Button Name="hbutton2" Content="Game" Width="200" Height="100" Canvas.Top="230" Canvas.Right="30" Background="Red" FontFamily="Snap ITC" FontSize="50"/>
+            </Canvas>
+
+            <Button Name="gamehome" Content="Home" Canvas.Top="150" Canvas.Right="300" Width="150" Height="80" FontSize="40"  Visibility="Hidden" FontFamily="Matura MT Script Capitals"></Button>
+
+            <Canvas Name="adlist" Width="350" Height="200" Canvas.Left="650" Canvas.Top="350" Visibility="Hidden">
+                <Canvas Name="adlist1" Width="200" Height="100" Canvas.Left="0" Canvas.Top="0">
+                    <Button Name="adbutton1" Content="NEWS1" Width="200" Height="60" Canvas.Top="0" Canvas.Left="0" Background="Cyan" FontFamily="Snap ITC" FontSize="20"/>
+                </Canvas>
+                <Canvas Name="adlist2" Width="200" Height="100" Canvas.Right="0" Canvas.Top="0">
+                    <Button Name="adbutton2" Content="NEWS2" Width="200" Height="60" Canvas.Top="0" Canvas.Right="0" Background="Cyan" FontFamily="Snap ITC" FontSize="20"/>
+                </Canvas>
+                <Canvas Name="adlist3" Width="200" Height="100" Canvas.Left="0" Canvas.Bottom="0">
+                    <Button Name="adbutton3" Content="NEWS3" Width="200" Height="60" Canvas.Top="0" Canvas.Left="0" Background="Cyan" FontFamily="Snap ITC" FontSize="20"/>
+                </Canvas>
+                <Canvas Name="adlist4" Width="200" Height="100" Canvas.Right="0" Canvas.Bottom="0">
+                    <Button Name="adbutton4" Content="Home" Width="200" Height="60" Canvas.Top="0" Canvas.Left="0" Background="Cyan" FontFamily="Snap ITC" FontSize="20" Margin="0"/>
+                </Canvas>
+            </Canvas>
+            <Canvas Name="addisplay" Width="700" Height="250" Canvas.Right="480" Canvas.Top="250" Visibility="Hidden">
+                <Canvas Name="adcv" Width="150" Height="175">
+                    <Image Name="adpic1"  Height="400"  Width="300" Canvas.Top="50" Source="sai.png" Visibility="Hidden"/>
+                    <Image Name="adpic2" Width="350" Height="300" Source="広告.png" Visibility="Hidden"/>
+                    <Image Name="adpic3" Height="440" Width="410" Source="seikohot.jpg" Visibility="Hidden"/>
+                </Canvas>
+                <Canvas Name="addisbutton" Width="150" Height="175" Canvas.Right="0">
+                    <Button Name="backbutton" Content="Back" Width="160" Height="100" Canvas.Top="30" Canvas.Right="0"  Background="Green" FontFamily="Snap ITC" FontSize="40"/>
+                    <Button Name="homebutton" Content="Home" Width="160" Height="100" Canvas.Top="150" Canvas.Right="0" Background="Green" FontFamily="Snap ITC" FontSize="40" />
+                </Canvas>
+
+
+            </Canvas>
+        </Canvas>
+
+    </Grid>
+</Window>
